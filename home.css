@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family:'Poppins';
+}
+/* Header - Nav Menu */
+.navbar{
+    background: #e5d89b !important;
+}
+
+.navbar-expand-lg .navbar-collapse {
+    flex-basis: auto !important;
+}
+
+
+.nav-item {
+    padding: 0 3rem !important;
+}
+
+.nav-link{
+    color: #2c2c2c;
+    font-weight: 500;
+    padding: 0 3rem;
+}
+
+.nav-link:hover{
+    color: #FCB710 !important;
+}
+
+.wpp{
+    background: #128c7e;
+    border-radius: 40px;
+    width: 50px;
+    height: 50px;
+}
+.bxl-whatsapp{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.navbar-toggler{
+    margin-right: 3rem;
+}
+.--bs-navbar-toggler-icon-bg{
+    color:black ;
+}
+
+/*Responsividade - Nav Menu  */
+@media (min-width:768px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important;
+    }
+
+    .navbar-expand-lg .navbar-toggler {
+        display: none;
+    }
+
+    .navbar-nav {
+        flex-direction: row !important;
+    }
+
+    .mb-2 {
+        margin-bottom: 0.5rem !important;
+    }
+
+    .me-auto {
+        margin-right: auto !important;
+    }
+
+    .navbar-collapse {
+        flex-grow: 1;
+        align-items: center;
+    }
+    .wpp{
+        margin-right: 3rem;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar-expand-lg .navbar-collapse {
+        flex-basis: 100% !important;
+    }
+    .nav-item{
+        padding: 1rem !important;
+        grid-row-end: auto;
+    }
+}
+
