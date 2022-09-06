@@ -9,7 +9,7 @@ html{
 }
 /* Header - Nav Menu */
 .navbar{
-    background: #e5d89b !important;
+    background: white !important;
 }
 
 .navbar-expand-lg .navbar-collapse {
@@ -47,6 +47,55 @@ html{
 }
 .--bs-navbar-toggler-icon-bg{
     color:black ;
+}
+
+.image-banner{
+    background-image: url("assets/1.Inicial.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 150px;
+    width: 100%;
+    padding-bottom: 1rem;
+
+}
+
+.button-contat{
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
+    padding: .5rem;
+    text-align: center;
+    font-weight: bold;
+    background: white;
+    color: black;
+    text-decoration: none;
+}
+.button-contat:hover{
+    background:  #FCB710;
+    color: black;
+}
+
+.button-demonstration{
+    border: 2px solid #FCB710;
+    border-radius: 20px;
+    background: white;
+    color: #FCB710;
+    padding: .5rem;
+    text-decoration: none;
+}
+
+.button-demonstration:hover{
+    color: black;
+    border: 2px solid black;
+}
+.cases{
+    color: #FCB710;
+}
+
+footer{
+    background: black;
+    color: white;
 }
 
 /*Responsividade - Nav Menu  */
