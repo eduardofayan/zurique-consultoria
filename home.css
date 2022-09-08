@@ -87,10 +87,33 @@ html{
 
 .button-demonstration:hover{
     color: black;
-    border: 2px solid black;
+    background: #FCB710;
 }
 .cases{
     color: #FCB710;
+}
+
+.itens-carousel{
+    max-width: 100px !important;
+}
+.card-body-img{
+    max-width: 200px;
+} 
+.img-item{
+    max-width: 290px !important;
+    border-radius: 20px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+.card{
+    --bs-card-border-width: 0 !important;
+}
+.carousel-control-prev-icon{
+   color: #FCB710 !important;
+}
+.bxs-chevron-left, .bxs-chevron-right{
+        font-size: 4rem;
+        color: #FCB710 !important;
+        text-shadow: 0 5px 5px rgba(0, 0, 0, 0.9);
 }
 
 footer{
