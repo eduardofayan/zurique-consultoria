@@ -30,7 +30,9 @@ html{
 .nav-link:hover{
     color: #FCB710 !important;
 }
-
+a .logo{
+    width: 100%;
+}
 .wpp{
     background: #128c7e;
     border-radius: 40px;
@@ -114,6 +116,11 @@ html{
         font-size: 4rem;
         color: #FCB710 !important;
         text-shadow: 0 5px 5px rgba(0, 0, 0, 0.9);
+}
+
+.empresa-img{
+    border-radius: 20px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 footer{
