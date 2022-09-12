@@ -242,6 +242,23 @@ header {
     text-decoration: none;
 }
 
+.row-drummer{
+    padding: 2rem;
+}
+
+.row-drummer p{
+    font-weight: bold;
+}
+
+.img-drummer{
+    border: 1px solid gray;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
+}
+
+.accordion-body, .accordion-button{
+    font-weight: bold;
+}
+
 footer {
     background: black;
     color: white;
