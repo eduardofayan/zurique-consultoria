@@ -259,6 +259,16 @@ header {
     font-weight: bold;
 }
 
+.card-drummer{
+     border: 1px solid gray;
+     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
+     padding: 2rem;
+     margin: 1rem;
+}
+
+.card-drummer p{
+    font-weight: bold;
+}
 footer {
     background: black;
     color: white;
