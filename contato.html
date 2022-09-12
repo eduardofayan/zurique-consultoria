@@ -15,6 +15,10 @@
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <!--Box Icon-->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!--Carousel-->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+
 </head>
 
 <body>
@@ -62,23 +66,45 @@
         </div>
     </header>
     <main>
+        <section class="fundo-form">
+            <div class="container-fluid p-5">
+                <div class="header-form d-flex justify-content-center position-relative">
+                    <div class="card-form d-flex justify-content-center align-items-center position-absolute p-2">
+                        <h4 class="p-2 px-4"> <strong>
+                                ENTRAR EM CONTATO
+                            </strong></h4>
+                    </div>
 
-        <div class="container">
-            <div class="row p-5 my-4">
-                <div class="col-6 p-3">
-                    <img class="img-fluid empresa-img" src="assets/empresa.png" alt="Empresa">
                 </div>
-                <div class="col-6 p-3">
-                    <p> <strong>
-                            DESDE 2007, A ZURIQUE CONSULTORIA É ESPECIALIZADA NA COMERCIALIZAÇÃO, IMPLEMENTAÇÃO E
-                            SUPORTE AO SOFTWARE DRUMMER APS. <br>
-                            FOCADA NOS MAIS ATUAIS CONCEITOS DA INSDÚSTRIA 4.0, ALÉM DO SOFTWARE APS, ATUAMOS COM
-                            SOLUÇÕES MES E WMS, TODOS TOTALMENTE INTEGRADOS ENTRE SI COM OS ERP´S.
-                        </strong>
-                    </p>
-                </div>
+                <form action="" method="POST">
+                    <div class="container p-5 my-5 form-fundo">
+                        <div class="row pt-2">
+                            <div class="form-group col">
+                                <label for="title-name" class="col-form-label">Nome</label>
+                                <input type="text" class="form-control" name="message" id="title-name">
+                            </div>
+                            <div class="form-group col">
+                                <label for="title-name" class="col-form-label">Telefone para Contato</label>
+                                <input type="text" class="form-control" name="message" id="title-upname">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="title-name" class="col-form-label">Email</label>
+                            <input type="email" class="form-control" name="email" id="title-email">
+                        </div>
+                        <div class="form-group">
+                            <label for="title-name" class="col-form-label">Nome da sua empresa</label>
+                            <input type="email" class="form-control" name="email" id="title-email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Mensagem</label>
+                            <textarea class="form-control" name="content" id="message-text"></textarea>
+                        </div>
+                        <button class="w-100 my-3 button-form"> CONCLUIR SOLICITAÇÃO</button>
+                    </div>
+                </form>
             </div>
-        </div>
+        </section>
         <section class="container">
             <div class="text-center cases p-4">
                 <h1> <strong>
@@ -168,7 +194,12 @@
         </div>
     </footer>
 
+    <script>
+        $(function () {
 
+            $('.phone_ddd_mask').mask('(00) 00000-0000');
+        });
+    </script>
 
 
     <!--Bootstrap-->
@@ -180,6 +211,10 @@
     <!--Plataforma Zendesk-->
     <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=3e491b86-1da0-4f34-a64d-5955e6581ccb">
     </script>
+    <!--Carousel-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!--Script Form-->
+    <script type="text/javascript" src="js/scriptform.js"></script>
 </body>
 
 </html>
