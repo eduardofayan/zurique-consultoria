@@ -237,6 +237,10 @@ header {
     background: #FCB710;
     color: black;
 }
+.div-contato a{
+    color: #000000;
+    text-decoration: none;
+}
 
 footer {
     background: black;
@@ -323,6 +327,9 @@ footer {
         flex-direction: column;
         text-align: center;
         padding-bottom: 1rem;
+        padding: 0 !important;
+        margin: 0 !important;
+        background: gray;
     }
     .mobile-menu .nav-item {
         display: block;
