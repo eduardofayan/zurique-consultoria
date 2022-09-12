@@ -303,6 +303,20 @@ footer {
       font-size: 13px !important;
     }
 }
+@media screen and (max-width:1200px) {
+    .img-item{
+        width: 300px;
+    }
+    
+}
+@media screen and (min-width: 1200px) and (max-width:1400px) {
+    .img-item{
+        width: 350px;
+    }
+    
+}
+
+
 
 @media screen and (max-width: 941px) {
     .nav-bar {
@@ -329,7 +343,6 @@ footer {
         padding-bottom: 1rem;
         padding: 0 !important;
         margin: 0 !important;
-        background: gray;
     }
     .mobile-menu .nav-item {
         display: block;

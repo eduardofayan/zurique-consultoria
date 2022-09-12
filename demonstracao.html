@@ -76,35 +76,37 @@
                     </div>
 
                 </div>
-                <form action="mailto:edivan@zurique.com.br" method="POST" enctype="text/plain">
+                <form action="https://api.staticforms.xyz/submit" method="post" enctype="text/plain">
+                    <input type="hidden" name="accessKey" value="989bff13-e4fb-4b94-bef7-e025b4774436">
                     <div class="container p-5 my-5 form-fundo">
                         <div class="row pt-2">
                             <div class="form-group col">
                                 <label for="title-name" class="col-form-label">Nome</label>
-                                <input type="text" class="form-control" name="Nome" id="title-name">
+                                <input type="text" class="form-control" name="Nome" id="title-name" placeholder="Digite seu nome" required>
                             </div>
                             <div class="form-group col">
                                 <label for="title-name" class="col-form-label">Sobrenome</label>
-                                <input type="text" class="form-control" name="sobrenome" id="title-upname">
+                                <input type="text" class="form-control" name="sobrenome" id="title-upname" placeholder="Digite seu sobrenome" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="title-name" class="col-form-label">Email</label>
-                            <input type="email" class="form-control" name="email" id="title-email">
+                            <input type="email" class="form-control" name="email" id="title-email" placeholder="Digite seu email" required>
                         </div>
                         <div class="form-group">
                             <label for="title-name" class="col-form-label">Telefone para contato</label>
-                            <input type="text" class="form-control" name="tel" id="title-email">
+                            <input type="text" class="form-control" name="tel" id="title-email" placeholder="Digite seu numero de telefone" required>
                         </div>
                         <div class="form-group">
                             <label for="title-name" class="col-form-label">Nome da sua empresa</label>
-                            <input type="email" class="form-control" name="Empresa" id="title-email">
+                            <input type="text" class="form-control" name="Empresa" id="text-empre" placeholder="Digite o nome da sua empresa" required>
                         </div>
                         <div class="form-group">
                             <label for="message-text" class="col-form-label">Mensagem</label>
-                            <textarea class="form-control" name="content" id="message-text"></textarea>
+                            <textarea class="form-control" name="content" id="message-text" placeholder="Digite sua mensagem" required></textarea>
                         </div>
                         <button class="w-100 my-3 button-form" type="submit" > CONCLUIR SOLICITAÇÃO </button>
+                        
                     </div>
                 </form>
             </div>
