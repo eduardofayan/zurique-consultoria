@@ -35,9 +35,9 @@
 
   //Enviar
   if (mail($destino, $assunto, $arquivo, $headers)){
-    echo ("Email Enviado com sucesso, Aguarde um momento estamos te redirecionando de volta para Zurique Consultoria <meta http-equiv='refresh' content='10;URL=../demonstracao.html'> ") ;
+    echo ("Email Enviado com sucesso, Aguarde um momento estamos te redirecionando de volta para Zurique Consultoria... <meta http-equiv='refresh' content='10;URL=../demonstracao.html'> ") ;
   } else {
-    echo ("Ocorreu um erro no envio, Tente Novamente");
+    echo ("Ocorreu um erro no envio, estamos te redirecionando para tentar Novamente");
   };
   if($_POST):
     if(isset($_POST['url'])&&strlen($_POST['url'])==0 ) {
