@@ -1,9 +1,5 @@
 <?php
- if($_POST):
-  if(isset($_POST['url'])&&strlen($_POST['url'])==0 ) {
-      echo "ok não é um spam";
-  }
-endif;
+ 
   //Variáveis
   $nome = $_POST['nome'];
   $sobrenome = $_POST['sobrenome'];
@@ -15,12 +11,18 @@ endif;
   $hora_envio = date('H:i:s');
 
   //Compo E-mail
-  $body = "Nome: ".$nome.$sobrenome. "\n";
-          "E-mail: ".$email."\n";
-          "Telefone: ".$tel."\n";
-          "Nome da empresa: ".$empresa."\n";
-          "Mensagem: " .$mensagem."\n";
-          "Enviado em: ".$data_envio."as" .$hora_envio;
+  $arquivo = "
+    <html>
+      <p><b>Formúlario de Solicitar Demonstração</b></p>
+      <p><b>Nome: </b>$nome</p>
+      <p><b>Sobrenome: </b>$sobrenome</p>
+      <p><b>E-mail: </b>$email</p>
+      <p><b>Telefone: </b>$tel</p>
+      <p><b>Nome da Empresa: </b>$empresa</p>
+      <p><b>Mensagem: </b>$mensagem</p>
+      <p>Este e-mail foi enviado em <b>$data_envio</b> às <b>$hora_envio</b></p>
+    </html>
+  ";
   
   //Emails para quem será enviado o formulário
   $destino = "viniciusfayan@gmail.com";
@@ -32,10 +34,14 @@ endif;
   $headers .= "From: $nome <$email>";
 
   //Enviar
-  if (mail($destino, $assunto, $body, $headers)){
-    echo ("Email Enviado com sucesso <meta http-equiv='refresh' content='10;URL=../demonstracao.html'> ") ;
+  if (mail($destino, $assunto, $arquivo, $headers)){
+    echo ("Email Enviado com sucesso, Aguarde um momento estamos te redirecionando de volta para Zurique Consultoria <meta http-equiv='refresh' content='10;URL=../demonstracao.html'> ") ;
   } else {
     echo ("Ocorreu um erro no envio, Tente Novamente");
-  }
-  
+  };
+  if($_POST):
+    if(isset($_POST['url'])&&strlen($_POST['url'])==0 ) {
+        echo "ok não é um spam";
+    }
+  endif;
 ?>
