@@ -15,13 +15,12 @@ endif;
   $hora_envio = date('H:i:s');
 
   //Compo E-mail
-  $body = "Nome: ".$nome. "\n"
-          "Sobrenome: " .$sobrenome. "\n"
-          "E-mail: " .$email. "\n"
-          "Telefone: " .$tel. "\n"
-          "Nome da empresa: " .$empresa. "\n"
-          "Mensagem: " .$mensagem. "\n"
-          "Enviado em: ".$data_envio. "as" .$hora_envio;
+  $body = "Nome: ".$nome.$sobrenome. "\n";
+          "E-mail: ".$email."\n";
+          "Telefone: ".$tel."\n";
+          "Nome da empresa: ".$empresa."\n";
+          "Mensagem: " .$mensagem."\n";
+          "Enviado em: ".$data_envio."as" .$hora_envio;
   
   //Emails para quem será enviado o formulário
   $destino = "viniciusfayan@gmail.com";
