@@ -1,12 +1,12 @@
 <?php
  
   //Variáveis
-  $nome = $_POST['nome'];
-  $sobrenome = $_POST['sobrenome'];
-  $email = $_POST['email'];
-  $tel = $_POST['tel'];
-  $empresa = $_POST['empresa'];
-  $mensagem = $_POST['content'];
+  $nome = addslashes($_POST['nome']);
+  $sobrenome = addslashes($_POST['sobrenome']);
+  $email = addslashes($_POST['email']);
+  $tel = addslashes($_POST['tel']);
+  $empresa = addslashes($_POST['empresa']);
+  $mensagem = addslashes($_POST['content']);
   $data_envio = date('d/m/Y');
   $hora_envio = date('H:i:s');
 
