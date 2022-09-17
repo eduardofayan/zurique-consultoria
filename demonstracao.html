@@ -37,8 +37,20 @@
                                     class='bx bxs-home'></i></strong></a>
                     </li>
                     <li class="nav-item"><a href="empresa.html" class="nav-link"> <strong>EMPRESA </strong></a></li>
-                    <li class="nav-item"><a href="principaismodulos.html" class="nav-link"> <strong> DRUMMER APS
-                            </strong></a></li>
+                    <li class="nav-item dropdown-center ">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            DRUMMER APS
+                        </a>
+                        <ol class="dropdown-menu ">
+                            <li><a class="dropdown-item" href="principaismodulos.html">Príncipais Módulos</a></li>
+                            <li><a class="dropdown-item" href="porqueoptarpelodrummer.html">Porque optar pelo
+                                    Drummer?</a>
+                            </li>
+                            <li><a class="dropdown-item" href="Benefícios em potencial - ROI.html">Benefícios em
+                                    potencial - ROI</a></li>
+                        </ol>
+                    </li>
                     <li class="nav-item"><a href="demonstracao.html" class="nav-link"> <strong> DEMONSTRAÇÃO
                             </strong></a>
                     </li>
@@ -46,10 +58,10 @@
                 </ul>
             </div>
             <div class="mobile-menu-icon">
-                <button onclick="menuShow()"><img class="icon" src="assets/fundopi.png" width="50" height="50"
+                <button onclick="menuShow()"><img class="icon" src="assets/fundopi.png" width="40" height="40"
                         alt=""></button>
             </div>
-            <div class=" justify-content-center align-items-center d-flex">
+            <div class="d-md-flex d-none justify-content-center align-items-center d-flex">
                 <a href="https://wa.me/+5511996203400" target="_blank"><img class=" mx-auto" src="assets/whatsapp.png"
                         alt="" width="80" height="60"></a>
             </div>
@@ -62,13 +74,28 @@
                 <li class="nav-item"><a href="empresa.html" class="nav-link border-2 border-dark"> <strong>EMPRESA
                         </strong></a>
                 </li>
-                <li class="nav-item"><a href="#" class="nav-link border-2 border-dark"> <strong> DRUMMER APS
-                        </strong></a></li>
+                <li class="nav-item dropdown-center ">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        DRUMMER APS
+                    </a>
+                    <ol class="dropdown-menu ">
+                        <li><a class="dropdown-item" href="principaismodulos.html">Príncipais Módulos</a></li>
+                        <li><a class="dropdown-item" href="porqueoptarpelodrummer.html">Porque optar pelo Drummer?</a>
+                        </li>
+                        <li><a class="dropdown-item" href="Benefícios em potencial - ROI.html">Benefícios em potencial -
+                                ROI</a></li>
+                    </ol>
+                </li>
                 <li class="nav-item"><a href="demonstracao.html" class="nav-link border-2 border-dark"> <strong>
                             DEMONSTRAÇÃO
                         </strong></a></li>
                 <li class="nav-item"><a href="contato.html" class="nav-link border-2 border-dark"> <strong> CONTATO
                         </strong></a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://wa.me/+5511996203400" target="_blank"><img class=" mx-auto"
+                            src="assets/whatsapp.png" alt="" width="80" height="60"></a>
                 </li>
             </ul>
         </div>
@@ -84,41 +111,36 @@
                     </div>
 
                 </div>
-                <form action="https://api.staticforms.xyz/submit" method="post" enctype="text/plain">
-                    <input type="hidden" name="accessKey" value="989bff13-e4fb-4b94-bef7-e025b4774436">
-                    <input type="text" name="honeypot" style="display: none;">
+                <form action="./php/enviodemonstracao.php" method="POST" enctype="text/plain">
                     <div class="container p-5 my-5 form-fundo">
                         <div class="row pt-2">
                             <div class="form-group col">
                                 <label for="title-name" class="col-form-label">Nome</label>
-                                <input type="text" class="form-control" name="Nome" id="title-name"
-                                    placeholder="Digite seu nome" required>
+                                <input type="text" class="form-control" name="nome" id="title-name" required>
                             </div>
                             <div class="form-group col">
                                 <label for="title-name" class="col-form-label">Sobrenome</label>
-                                <input type="text" class="form-control" name="sobrenome" id="title-upname"
-                                    placeholder="Digite seu sobrenome" required>
+                                <input type="text" class="form-control" name="sobrenome" id="title-upname" required>
                             </div>
+                        </div>
+                        <div class="naoexibir">
+                            <p>Não preencher:<input type="text" name="url" value=""></p>
                         </div>
                         <div class="form-group">
                             <label for="title-name" class="col-form-label">Email</label>
-                            <input type="email" class="form-control" name="email" id="title-email"
-                                placeholder="Digite seu email" required>
+                            <input type="email" class="form-control" name="email" id="title-email" required>
                         </div>
                         <div class="form-group">
                             <label for="title-name" class="col-form-label">Telefone para contato</label>
-                            <input type="text" class="form-control" name="tel" id="title-email"
-                                placeholder="Digite seu numero de telefone" required>
+                            <input type="text" class="form-control" name="tel" id="title-email" required>
                         </div>
                         <div class="form-group">
                             <label for="title-name" class="col-form-label">Nome da sua empresa</label>
-                            <input type="text" class="form-control" name="Empresa" id="text-empre"
-                                placeholder="Digite o nome da sua empresa" required>
+                            <input type="text" class="form-control" name="empresa" id="text-empre" required>
                         </div>
                         <div class="form-group">
                             <label for="message-text" class="col-form-label">Mensagem</label>
-                            <textarea class="form-control" name="content" id="message-text"
-                                placeholder="Digite sua mensagem" required></textarea>
+                            <textarea class="form-control" name="content" id="message-text" required></textarea>
                         </div>
                         <button class="w-100 my-3 button-form" type="submit"> CONCLUIR SOLICITAÇÃO </button>
 
@@ -236,6 +258,8 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!--Script Form-->
     <script type="text/javascript" src="js/scriptform.js"></script>
+    <!--Header Script-->
+    <script src="js/headerscript.js"></script>
 </body>
 
 </html>
