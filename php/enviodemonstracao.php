@@ -38,6 +38,10 @@ endif;
   $headers .= "From: $nome <$email>";
 
   //Enviar
-  mail($destino, $assunto, $arquivo, $headers);
+  if (mail($destino, $assunto, $arquivo, $headers)){
+    echo ("Email Enviado com sucesso <meta http-equiv='refresh' content='10;URL=../demonstracao.html'> ") ;
+  } else {
+    echo ("Ocorreu um erro no envio, Tente Novamente");
+  }
   
-  echo "<meta http-equiv='refresh' content='10;URL=../demonstracao.html'>";
+?>
