@@ -37,8 +37,19 @@
                                     class='bx bxs-home'></i></strong></a>
                     </li>
                     <li class="nav-item"><a href="empresa.html" class="nav-link"> <strong>EMPRESA </strong></a></li>
-                    <li class="nav-item"><a href="principaismodulos.html" class="nav-link"> <strong> DRUMMER APS
-                            </strong></a></li>
+                    <li class="nav-item dropdown-center ">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            DRUMMER APS
+                        </a>
+                        <ol class="dropdown-menu ">
+                            <li><a class="dropdown-item" href="principaismodulos.html">Príncipais Módulos</a></li>
+                            <li><a class="dropdown-item" href="porqueoptarpelodrummer.html">Porque optar pelo
+                                    Drummer?</a>
+                            </li>
+                            <li><a class="dropdown-item" href="Benefícios em potencial - ROI.html">Benefícios em potencial - ROI</a></li>
+                        </ol>
+                    </li>
                     <li class="nav-item"><a href="demonstracao.html" class="nav-link"> <strong> DEMONSTRAÇÃO
                             </strong></a>
                     </li>
@@ -46,10 +57,10 @@
                 </ul>
             </div>
             <div class="mobile-menu-icon">
-                <button onclick="menuShow()"><img class="icon" src="assets/fundopi.png" width="50" height="50"
+                <button onclick="menuShow()"><img class="icon" src="assets/fundopi.png" width="40" height="40"
                         alt=""></button>
             </div>
-            <div class=" justify-content-center align-items-center d-flex">
+            <div class="d-md-flex d-none justify-content-center align-items-center d-flex">
                 <a href="https://wa.me/+5511996203400" target="_blank"><img class=" mx-auto" src="assets/whatsapp.png"
                         alt="" width="80" height="60"></a>
             </div>
@@ -62,13 +73,27 @@
                 <li class="nav-item"><a href="empresa.html" class="nav-link border-2 border-dark"> <strong>EMPRESA
                         </strong></a>
                 </li>
-                <li class="nav-item"><a href="#" class="nav-link border-2 border-dark"> <strong> DRUMMER APS
-                        </strong></a></li>
+                <li class="nav-item dropdown-center ">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        DRUMMER APS
+                    </a>
+                    <ol class="dropdown-menu ">
+                        <li><a class="dropdown-item" href="principaismodulos.html">Príncipais Módulos</a></li>
+                        <li><a class="dropdown-item" href="porqueoptarpelodrummer.html">Porque optar pelo Drummer?</a>
+                        </li>
+                        <li><a class="dropdown-item" href="Benefícios em potencial - ROI.html">Benefícios em potencial - ROI</a></li>
+                    </ol>
+                </li>
                 <li class="nav-item"><a href="demonstracao.html" class="nav-link border-2 border-dark"> <strong>
                             DEMONSTRAÇÃO
                         </strong></a></li>
                 <li class="nav-item"><a href="contato.html" class="nav-link border-2 border-dark"> <strong> CONTATO
                         </strong></a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://wa.me/+5511996203400" target="_blank"><img class=" mx-auto"
+                            src="assets/whatsapp.png" alt="" width="80" height="60"></a>
                 </li>
             </ul>
         </div>
@@ -91,29 +116,24 @@
                         <div class="row pt-2">
                             <div class="form-group col">
                                 <label for="title-name" class="col-form-label">Nome</label>
-                                <input type="text" class="form-control" name="message" id="title-name"
-                                    placeholder="Digite seu nome" required>
+                                <input type="text" class="form-control" name="message" id="title-name" required>
                             </div>
                             <div class="form-group col">
                                 <label for="title-name" class="col-form-label">Telefone para Contato</label>
-                                <input type="text" class="form-control" name="message" id="title-upname"
-                                    placeholder="Digite seu numero de telefone" required>
+                                <input type="text" class="form-control" name="message" id="title-upname" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="title-name" class="col-form-label">Email</label>
-                            <input type="email" class="form-control" name="email" id="title-email"
-                                placeholder="Digite seu email" required>
+                            <input type="email" class="form-control" name="email" id="title-email" required>
                         </div>
                         <div class="form-group">
                             <label for="title-name" class="col-form-label">Nome da sua empresa</label>
-                            <input type="text" class="form-control" name="text" id="text-empre"
-                                placeholder="Digite o nome da sua empresa" required>
+                            <input type="text" class="form-control" name="text" id="text-empre" required>
                         </div>
                         <div class="form-group">
                             <label for="message-text" class="col-form-label">Mensagem</label>
-                            <textarea class="form-control" name="content" id="message-text"
-                                placeholder="Digite sua mensagem" required></textarea>
+                            <textarea class="form-control" name="content" id="message-text" required></textarea>
                         </div>
                         <button class="w-100 my-3 button-form"> CONCLUIR SOLICITAÇÃO</button>
                     </div>
@@ -246,6 +266,8 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!--Script Form-->
     <script type="text/javascript" src="js/scriptform.js"></script>
+    <!--Header Script-->
+    <script src="js/headerscript.js"></script>
 </body>
 
 </html>

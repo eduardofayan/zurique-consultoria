@@ -37,8 +37,19 @@
                                     class='bx bxs-home'></i></strong></a>
                     </li>
                     <li class="nav-item"><a href="empresa.html" class="nav-link"> <strong>EMPRESA </strong></a></li>
-                    <li class="nav-item"><a href="principaismodulos.html" class="nav-link"> <strong> DRUMMER APS
-                            </strong></a></li>
+                    <li class="nav-item dropdown-center ">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            DRUMMER APS
+                        </a>
+                        <ol class="dropdown-menu ">
+                            <li><a class="dropdown-item" href="principaismodulos.html">Príncipais Módulos</a></li>
+                            <li><a class="dropdown-item" href="porqueoptarpelodrummer.html">Porque optar pelo
+                                    Drummer?</a>
+                            </li>
+                            <li><a class="dropdown-item" href="Benefícios em potencial - ROI.html">Benefícios em potencial - ROI</a></li>
+                        </ol>
+                    </li>
                     <li class="nav-item"><a href="demonstracao.html" class="nav-link"> <strong> DEMONSTRAÇÃO
                             </strong></a>
                     </li>
@@ -46,10 +57,10 @@
                 </ul>
             </div>
             <div class="mobile-menu-icon">
-                <button onclick="menuShow()"><img class="icon" src="assets/fundopi.png" width="50" height="50"
+                <button onclick="menuShow()"><img class="icon" src="assets/fundopi.png" width="40" height="40"
                         alt=""></button>
             </div>
-            <div class=" justify-content-center align-items-center d-flex">
+            <div class="d-md-flex d-none justify-content-center align-items-center d-flex">
                 <a href="https://wa.me/+5511996203400" target="_blank"><img class=" mx-auto" src="assets/whatsapp.png"
                         alt="" width="80" height="60"></a>
             </div>
@@ -62,13 +73,27 @@
                 <li class="nav-item"><a href="empresa.html" class="nav-link border-2 border-dark"> <strong>EMPRESA
                         </strong></a>
                 </li>
-                <li class="nav-item"><a href="#" class="nav-link border-2 border-dark"> <strong> DRUMMER APS
-                        </strong></a></li>
+                <li class="nav-item dropdown-center ">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        DRUMMER APS
+                    </a>
+                    <ol class="dropdown-menu ">
+                        <li><a class="dropdown-item" href="principaismodulos.html">Príncipais Módulos</a></li>
+                        <li><a class="dropdown-item" href="porqueoptarpelodrummer.html">Porque optar pelo Drummer?</a>
+                        </li>
+                        <li><a class="dropdown-item" href="Benefícios em potencial - ROI.html">Benefícios em potencial - ROI</a></li>
+                    </ol>
+                </li>
                 <li class="nav-item"><a href="demonstracao.html" class="nav-link border-2 border-dark"> <strong>
                             DEMONSTRAÇÃO
                         </strong></a></li>
                 <li class="nav-item"><a href="contato.html" class="nav-link border-2 border-dark"> <strong> CONTATO
                         </strong></a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://wa.me/+5511996203400" target="_blank"><img class=" mx-auto"
+                            src="assets/whatsapp.png" alt="" width="80" height="60"></a>
                 </li>
             </ul>
         </div>
@@ -130,7 +155,8 @@
                                 <div class="accordion-body">
                                     Principal componente deste módulo, é a responsável por balancear e sincronizar todo
                                     o processo produtivo, baseando-se nos gargalos de produção, quer sejam máquinas,
-                                    ferramentais ou matérias-primas. Provê o usuário com respostas rápidas às constantes
+                                    ferramentais ou matérias-primas. Provê o usuário com respostas rápidas, às
+                                    constantes
                                     mudanças que ocorrem no processo produtivo e na demanda do mercado, sempre
                                     observando as premissas e os objetivos corporativos.
                                 </div>
@@ -147,7 +173,7 @@
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     Simula o comportamento da fábrica perante situações comerciais. Analisa a capacidade
-                                    de atendimento a pedidos, sugerindo datas de entrega confiáveis e seguras e
+                                    de atendimento a pedidos, sugerindo datas de entrega confiáveis e seguras,
                                     visualizando os ganhos que a empresa pode obter com diferentes configurações
                                     comerciais ou carteiras de pedidos.
                                 </div>
@@ -156,7 +182,7 @@
                     </div>
                 </div>
                 <div class="col-6">
-                    <img class="img-drummer img-fluid mx-auto" src="assets/mps.jpg" alt="APS">
+                    <img class="img-drummer img-fluid mx-auto" src="assets/aps.jpg" alt="APS">
                 </div>
             </div>
             <div class="row align-items-center justify-content-center row-drummer">
@@ -165,10 +191,10 @@
                 </div>
                 <div class="col-6">
                     <h2>SUP</h2>
-                    <p>Compatibiliza as necessidades líquidas de matérias-primas e demais componentes comprados, geradas
+                    <p>Compatibiliza as necessidades líquidas de matérias-primas e demais componentes comprados geradas
                         pela programação, com os pedidos de suprimentos colocados nos fornecedores. Da mesma forma que a
-                        função de Gestão de Demanda, esta função permite a aplicação de políticas de compras a cada item
-                        comprado, tais como lotes mínimos, multiplicidade e frequências de entrega.
+                        função de Gestão de Demanda, permite a aplicação de políticas de compras por item, tais como
+                        lotes mínimos, multiplicidade e frequências de entrega.
                     </p>
                 </div>
             </div>
@@ -317,6 +343,8 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!--Script Form-->
     <script type="text/javascript" src="js/scriptform.js"></script>
+    <!--Header Script-->
+    <script src="js/headerscript.js"></script>
 </body>
 
 </html>

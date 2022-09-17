@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: pt-serif, serif;
 }
 
 html {
@@ -12,7 +13,7 @@ html {
 
 /* Header - Nav Menu */
 header {
-    background-color:#ffffff;
+    background-color: #ffffff;
 }
 
 .nav-bar {
@@ -43,10 +44,27 @@ header {
     margin: 0 !important;
 }
 
+.dropdown-menu {
+    display: none;
+}
+
+.dropdown-menu .show {
+    display: block !important;
+}
+
+.dropdown-toggle {
+    font-weight: bold !important;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
 .nav-item {
     margin: 0 15px;
 }
-.bxs-home{
+
+.bxs-home {
     font-size: 30px;
 
 }
@@ -179,6 +197,11 @@ header {
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 }
 
+.naoexibir {
+    display: none;
+}
+
+
 .fundo-form {
     background-image: url('../assets/fundoform.png') !important;
     background-position: center;
@@ -237,38 +260,40 @@ header {
     background: #FCB710;
     color: black;
 }
-.div-contato a{
+
+.div-contato a {
     color: #000000;
     text-decoration: none;
 }
 
-.row-drummer{
+.row-drummer {
     padding: 2rem;
 }
 
-.row-drummer p{
+.row-drummer p {
     font-weight: bold;
 }
 
-.img-drummer{
+.img-drummer {
     border: 1px solid gray;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
 }
 
-.accordion-body, .accordion-button{
+.accordion-body, .accordion-button {
     font-weight: bold;
 }
 
-.card-drummer{
-     border: 1px solid gray;
-     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
-     padding: 2rem;
-     margin: 1rem;
+.card-drummer {
+    border: 1px solid gray;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    margin: 1rem;
 }
 
-.card-drummer p{
+.card-drummer p {
     font-weight: bold;
 }
+
 footer {
     background: black;
     color: white;
@@ -317,30 +342,40 @@ footer {
         padding: 1rem !important;
         grid-row-end: auto;
     }
+
+    .card-body {
+        justify-content: center !important;
+    }
+
+    .img-item {
+        width: 350px !important;
+    }
 }
 
 @media only screen and (min-width: 767px) and (max-width: 1084px) {
-    .nav-toggler-icon{
+    .nav-toggler-icon {
         background-image: url('../assets/fundopi.png') !important;
     }
 }
 
-@media only screen and (max-width: 1084px ) {
+@media only screen and (max-width: 1084px) {
     .nav-link {
-      font-size: 13px !important;
+        font-size: 13px !important;
     }
 }
+
 @media screen and (max-width:1200px) {
-    .img-item{
+    .img-item {
         width: 300px;
     }
-    
+
 }
+
 @media screen and (min-width: 1200px) and (max-width:1400px) {
-    .img-item{
+    .img-item {
         width: 350px;
     }
-    
+
 }
 
 
@@ -349,20 +384,25 @@ footer {
     .nav-bar {
         padding: 1.5rem 4rem;
     }
+
     .nav-item {
         display: none;
     }
+
     .login-button {
         display: none;
     }
+
     .mobile-menu-icon {
         display: block;
     }
+
     .mobile-menu-icon button {
         background-color: transparent;
         border: none;
         cursor: pointer;
     }
+
     .mobile-menu ul {
         display: flex;
         flex-direction: column;
@@ -371,23 +411,28 @@ footer {
         padding: 0 !important;
         margin: 0 !important;
     }
+
     .mobile-menu .nav-item {
         display: block;
         padding-top: 1.2rem;
     }
+
     .mobile-menu .login-button {
         display: block;
         padding: 1rem 2rem;
     }
+
     .mobile-menu .login-button button {
         width: 100%;
     }
+
     .open {
         display: block;
     }
 }
-@media only screen and (min-width: 1187px ) {
+
+@media only screen and (min-width: 1187px) {
     .iconhome {
-      margin-right: 100px!important;
+        margin-right: 100px !important;
     }
 }
