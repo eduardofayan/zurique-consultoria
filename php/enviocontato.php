@@ -21,7 +21,7 @@
   ";
   
   //Emails para quem será enviado o formulário
-  $destino = "viniciusfayan@gmail.com";
+  $destino = "edivan@zurique.com.br";
   $assunto = "Solicitação de Contato";
 
   //Este sempre deverá existir para garantir a exibição correta dos caracteres
