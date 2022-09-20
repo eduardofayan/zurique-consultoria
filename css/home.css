@@ -308,8 +308,8 @@ header {
     border-radius: 10px;
 }
 
-.card-drummer-optar h5{
-    color:  #FCB710;
+.text-yellow{
+    color:  #FCB710 !important;
 }
 
 footer {
