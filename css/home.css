@@ -69,6 +69,10 @@ header {
 
 }
 
+.text-init{
+    font-size: medium;
+}
+
 .nav-link {
     text-decoration: none;
     font-size: 1.15rem;
@@ -174,7 +178,7 @@ header {
 }
 
 .img-item {
-    border-radius: 20px;
+    border-radius: 0;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -270,16 +274,13 @@ header {
     padding: 2rem;
 }
 
-.row-drummer p {
-    font-weight: bold;
-}
 
 .img-drummer {
     border: 1px solid gray;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
 }
 
-.accordion-body, .accordion-button {
+.accordion-button{
     font-weight: bold;
 }
 
@@ -307,12 +308,8 @@ header {
     border-radius: 10px;
 }
 
-.card-drummer-optar h4{
+.card-drummer-optar h5{
     color:  #FCB710;
-}
-
-.card-drummer p {
-    font-weight: bold;
 }
 
 footer {

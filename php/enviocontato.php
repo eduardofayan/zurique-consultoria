@@ -11,7 +11,7 @@
 
   //Compo E-mail
   $arquivo = "
-    Formúlario de Solicitar Demonstração
+    Formúlario de Solicitar Contato
       Nome: $nomecontato
       Telefone para contato: $telcontato
       E-mail: $emailcontato
