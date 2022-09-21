@@ -73,6 +73,18 @@ header {
     font-size: medium;
 }
 
+.text-init li{
+        margin: 0;
+        padding: .5rem 0 0 2rem;
+        margin-left: 1rem;
+        list-style: none;
+        background-image: url("../assets/list-li.webp");
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: 40px;
+}
+
+
 .nav-link {
     text-decoration: none;
     font-size: 1.15rem;
@@ -294,10 +306,7 @@ header {
 }
 
 .card-drummer-optar{
-    border: 2px solid  #FCB710;
-    padding: 2rem;
-    margin: 1rem;
-    border-radius: 10px;
+    margin: 0;
 }
 
 .card-drummer h2{
@@ -312,9 +321,9 @@ header {
     display: flex;
     justify-content: center;
     padding: .5rem;
-    width: 30%;
+    width: 20%;
     border: 2px solid  #FCB710;
-    border-radius: 10px;
+    border-radius: 100px;
 }
 
 .text-yellow{
@@ -465,5 +474,11 @@ footer {
 @media only screen and (min-width: 1187px) {
     .iconhome {
         margin-right: 100px !important;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .text-init {
+        font-size: small;
     }
 }
