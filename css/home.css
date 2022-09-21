@@ -290,6 +290,7 @@ header {
     padding: 2rem;
     margin: 1rem;
     max-height: 225px;
+    min-height: 225px;
 }
 
 .card-drummer-optar{
@@ -297,6 +298,14 @@ header {
     padding: 2rem;
     margin: 1rem;
     border-radius: 10px;
+}
+
+.card-drummer h2{
+    font-size: min(24px, 2.5vw);
+}
+
+.card-drummer p{
+    font-size: max(10px, 1.1vw);
 }
 
 .enum{
@@ -368,6 +377,10 @@ footer {
     .img-item {
         width: 350px !important;
     }
+    .card-drummer {
+        min-height: 150px;
+    }
+    
 }
 
 @media only screen and (min-width: 767px) and (max-width: 1084px) {
