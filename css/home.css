@@ -70,7 +70,7 @@ header {
 }
 
 .text-init{
-    font-size: medium;
+    font-size: 15px;
 }
 
 .text-init li{
@@ -82,6 +82,10 @@ header {
         background-repeat: no-repeat;
         background-position: left center;
         background-size: 40px;
+}
+
+.clientes-drummer {
+    font-size: 2rem !important;
 }
 
 
