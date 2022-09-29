@@ -8,7 +8,7 @@ use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';
 
-if(isset($_POST['.form'])){
+if(isset($_POST['enviar'])){
 
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
@@ -21,13 +21,13 @@ try {
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
     $mail->Username   = 'developereduardofayan@gmail.com';                     //SMTP username
     $mail->Password   = 'vkmwgwovvyscmroj';                               //SMTP password
-    $mail->SMTPSecure = 'tls' ;          //Enable implicit TLS encryption
-    $mail->Port       = '587';                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;          //Enable implicit TLS encryption
+    $mail->Port       = '465';                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
     $mail->setFrom('developereduardofayan@gmail.com', 'Email');
-    $mail->addAddress('viniciusfayan@gmail.com', 'Joe User');     //Add a recipien   
-    $mail->addReplyTo('info@example.com', 'Information');
+    $mail->addAddress('viniciusfayan@gmail.com', 'Solicitação de Contato');     //Add a recipien   
+    //$mail->addReplyTo('info@example.com', 'Information');
     //$mail->addCC('cc@example.com');
     //$mail->addBCC('bcc@example.com');
 
