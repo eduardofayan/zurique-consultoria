@@ -18,7 +18,10 @@
     <!--Carousel-->
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
-
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <!--SweetAlert-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -44,7 +47,8 @@
                         </a>
                         <ol class="dropdown-menu ">
                             <li><a class="dropdown-item" href="principaismodulos.html">Príncipais Módulos</a></li>
-                            <li><a class="dropdown-item" href="porqueoptarpelodrummer.html">Porque optar pelo Drummer?</a>
+                            <li><a class="dropdown-item" href="porqueoptarpelodrummer.html">Porque optar pelo
+                                    Drummer?</a>
                             </li>
                             <li><a class="dropdown-item" href="roi.html">Benefícios em potencial - ROI</a></li>
                         </ol>
@@ -79,7 +83,8 @@
                     </a>
                     <ol class="dropdown-menu ">
                         <li><a class="dropdown-item" href="principaismodulos.html">Príncipais Módulos</a></li>
-                        <li><a class="dropdown-item" href="porqueoptarpelodrummer.html">Porque optar pelo Drummer?</a></li>
+                        <li><a class="dropdown-item" href="porqueoptarpelodrummer.html">Porque optar pelo Drummer?</a>
+                        </li>
                         <li><a class="dropdown-item" href="roi.html">Benefícios em potencial - ROI</a></li>
                     </ol>
                 </li>
@@ -90,8 +95,8 @@
                         </strong></a>
                 </li>
                 <li class="nav-item">
-                    <a href="https://wa.me/+5511996203400" target="_blank"><img class=" mx-auto" src="assets/whatsapp.png"
-                            alt="" width="80" height="60"></a>
+                    <a href="https://wa.me/+5511996203400" target="_blank"><img class=" mx-auto"
+                            src="assets/whatsapp.png" alt="" width="80" height="60"></a>
                 </li>
             </ul>
         </div>
@@ -107,7 +112,7 @@
                     </div>
 
                 </div>
-                <form action="./php/enviocontato.php" method="post">
+                <form action="enviocontato.php" method="post" enctype="multipart/form-data" class="form">
                     <div class="container p-5 my-5 form-fundo">
                         <div class="row pt-2">
                             <div class="form-group col">
@@ -116,7 +121,7 @@
                             </div>
                             <div class="form-group col">
                                 <label for="title-name" class="col-form-label">Telefone para Contato</label>
-                                <input type="text" class="form-control" name="telcontato" id="title-upname" required>
+                                <input type="text" class=".phone_ddd_mask form-control" name="telcontato" id="title-upname" required>
                             </div>
                         </div>
                         <div class="naoexibir">
@@ -134,9 +139,12 @@
                             <label for="message-text" class="col-form-label">Mensagem</label>
                             <textarea class="form-control" name="contentcontato" id="message-text" required></textarea>
                         </div>
-                        <button class="w-100 my-3 button-form" type="submit"> CONCLUIR ENVÍO</button>
+                        <button class="w-100 my-3 button-form" type="submit" name="enviar" id="btn-contato"> CONCLUIR ENVÍO</button>
                     </div>
                 </form>
+                <div class="aviso">
+
+                </div>
             </div>
         </section>
         <section class="container">
@@ -145,7 +153,7 @@
                         ALGUNS CLIENTES DRUMMER APS
                     </strong></h1>
             </div>
-    
+
             <div id="carouselExampleControls" class="d-md-flex d-none carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -157,7 +165,7 @@
                                     </div>
                                     <div class="card-body d-flex col-1">
                                         <img class="img-item" src="assets/ftd.png" alt="">
-    
+
                                     </div>
                                     <div class="card-body d-flex col-1">
                                         <img class="img-item" src="assets/jandaia.png" alt="">
@@ -212,7 +220,7 @@
                     </button>
                 </div>
             </div>
-    
+
             <!--Carousel Responsivo-->
             <div id="carouselExampleControlsResp" class="d-md-none d-flex carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -327,8 +335,8 @@
                     </button>
                 </div>
             </div>
-    
-    
+
+
             <div class="container-fluid p-4 d-flex justify-content-center align-items-center">
                 <a type="button" class="button-demonstration" href="demonstracao.html">
                     SOLICITAR DEMONSTRAÇÃO
@@ -346,8 +354,18 @@
 
     <script>
         $(function () {
-
-            $('.phone_ddd_mask').mask('(00) 00000-0000');
+            $('.form').submit(function(){
+                $.ajax({
+                    url: 'enviocontato.php',
+                    type: 'POST',
+                    data: $('.form').serialize(),
+                    success: function(data){
+                        $('.aviso').html(data);
+                    }
+                });
+                return false;
+            });
+           
         });
     </script>
 
@@ -363,8 +381,6 @@
     </script>
     <!--Carousel-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!--Script Form-->
-    <script type="text/javascript" src="js/scriptform.js"></script>
     <!--Header Script-->
     <script src="js/headerscript.js"></script>
 </body>
