@@ -73,6 +73,7 @@ header {
     font-size: 15px;
 }
 
+
 .text-init li{
         margin: 0;
         padding: .5rem 0 0 2rem;
@@ -393,6 +394,53 @@ footer {
     .card-drummer {
         min-height: 150px;
     }
+    .text-init ul{
+        padding-left: 0 !important;
+    }
+    .clientes-drummer{
+        font-size: 1.5rem !important;
+    }
+    .card-drummer h2{
+        font-size: 1rem;
+    }
+    .card-drummer p{
+        font-size: .8rem;
+    }
+
+    .card-form{
+        top: 25px !important;
+        padding: 0.2rem !important;
+    }
+
+    .card-form h4{
+        font-size: .9rem !important;
+        margin-bottom: 0 !important;
+    }
+
+    .col-form-label{
+        font-size: .8rem !important;
+        padding-top: .9rem !important;
+    }
+
+    .form-control{
+        padding: 0 0.75rem !important;
+    }
+
+    .form-fundo{
+        max-height: 550px !important;
+    }
+
+    .fundo-form{
+        height: 700px !important;
+    }
+
+    .div-contato h5,.div-contato i{
+        font-size: 1rem !important;
+    }
+
+    footer{
+        font-size: .8rem;
+    }
     
 }
 
@@ -484,5 +532,11 @@ footer {
 @media only screen and (max-width: 1023px) {
     .text-init {
         font-size: small;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .button-form {
+        font-size: .8rem !important;
     }
 }

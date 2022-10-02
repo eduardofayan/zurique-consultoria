@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zurique Consultoria</title>
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!--Folhas de Estilo - CSS-->
+    <link rel="stylesheet" href="css/home.css">
+    <!--Google API Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <!--Box Icon-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!--Carousel-->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxy/1.6.1/scripts/jquery.ajaxy.min.js" integrity="sha512-bztGAvCE/3+a1Oh0gUro7BHukf6v7zpzrAb3ReWAVrt+bVNNphcl2tDTKCBr5zk7iEDmQ2Bv401fX3jeVXGIcA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <section class="fundo-form">
+        <div class="container-fluid p-5">
+            <div class="header-form d-flex justify-content-center position-relative">
+                <div class="card-form d-flex justify-content-center align-items-center position-absolute p-2">
+                    <h4 class="p-2 px-4"> <strong>
+                            ENTRAR EM CONTATO
+                        </strong></h4>
+                </div>
+
+            </div>
+            <form method="post" class="form">
+                <div class="container p-5 my-5 form-fundo">
+                    <div class="row pt-2">
+                        <div class="form-group col-md col-12">
+                            <label for="title-name" class="col-form-label">Nome</label>
+                            <input type="text" class="form-control" name="nomecontato" id="title-name" required>
+                        </div>
+                        <div class="form-group col">
+                            <label for="title-name" class="col-form-label">Telefone para Contato</label>
+                            <input type="text" class="form-control" name="telcontato" id="title-upname" required>
+                        </div>
+                    </div>
+                    <div class="naoexibir">
+                        <p>Não preencher:<input type="text" name="url" value=""></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="title-name" class="col-form-label">Email</label>
+                        <input type="email" class="form-control" name="emailcontato" id="title-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="title-name" class="col-form-label">Nome da sua empresa</label>
+                        <input type="text" class="form-control" name="empresacontato" id="text-empre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">Mensagem</label>
+                        <textarea class="form-control" name="contentcontato" id="message-text" required></textarea>
+                    </div>
+                    <button class="w-100 my-3 button-form" type="submit"> CONCLUIR ENVÍO</button>
+                </div>
+            </form>
+            <div class="aviso"></div>
+        </div>
+    </section>
+
+    <script>
+        $(function () {
+            $('.form').submit(function(){
+                $.ajax({
+                    url: './home/zurique/public_html/enviocontatotest.php',
+                    type: 'POST',
+                    data: $('.form').serialize(),
+                    success: function(data){
+                        $('.aviso').html(data);
+                    }
+                });
+                return false;
+            });
+    </script>
+
+    <!--Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <!--Box Icon-->
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <!--Plataforma Zendesk-->
+    <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=3e491b86-1da0-4f34-a64d-5955e6581ccb">
+    </script>
+    <!--Carousel-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!--Script Form-->
+    <script type="text/javascript" src="js/scriptform.js"></script>
+    <!--Header Script-->
+    <script src="js/headerscript.js"></script>
+</body>
+
+</html>
