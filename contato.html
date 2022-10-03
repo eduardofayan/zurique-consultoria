@@ -137,6 +137,8 @@
                             <textarea class="form-control" name="contentcontato" id="message-text" required></textarea>
                         </div>
                         <button class="w-100 my-3 button-form" type="submit"> CONCLUIR ENVÍO</button>
+                        <div class="aviso" style="color: green;">
+                        </div>
                     </div>
                 </form>
             </div>
@@ -413,6 +415,10 @@
                     }
                 });
                 document.getElementById('title-name').value = '';
+                document.getElementById('title-upname').value = '';
+                document.getElementById('title-email').value = '';
+                document.getElementById('text-empre').value = ''; 
+                document.getElementById('message-text').value = '';
                 return false;
             });
         });
