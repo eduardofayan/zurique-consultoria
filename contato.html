@@ -109,7 +109,7 @@
                     </div>
 
                 </div>
-                <form action="./php/enviocontato.php" method="post">
+                <form method="POST" action="php/enviocontato.php" enctype="multipart/form-data" class="form" id="formulario">
                     <div class="container p-5 my-5 form-fundo">
                         <div class="row pt-2">
                             <div class="form-group col-md col-12">
@@ -399,5 +399,23 @@
     <script type="text/javascript" src="js/mask.js"></script>
 
 </body>
+
+<script> 
+    $(function () {
+            $('.form').submit(function(event){
+                event.preventDefault();
+                $.ajax({
+                    url: 'php/enviocontato.php',
+                    type: 'POST',
+                    data: $('.form').serialize(),
+                    success: function(data){
+                        $('.aviso').html(data);
+                    }
+                });
+                document.getElementById('title-name').value = '';
+                return false;
+            });
+        });
+</script> 
 
 </html>
