@@ -111,12 +111,8 @@
                     <div class="container p-5 my-5 form-fundo">
                         <div class="row pt-2">
                             <div class="form-group col-md col-12">
-                                <label for="title-name" class="col-form-label">Nome</label>
+                                <label for="title-name" class="col-form-label">Nome completo</label>
                                 <input type="text" class="form-control" name="nome" id="title-name" required>
-                            </div>
-                            <div class="form-group col">
-                                <label for="title-name" class="col-form-label">Sobrenome</label>
-                                <input type="text" class="form-control" name="sobrenome" id="title-upname" required>
                             </div>
                         </div>
                         <div class="naoexibir">
@@ -139,6 +135,9 @@
                             <textarea class="form-control" name="content" id="message-text" required></textarea>
                         </div>
                         <button class="w-100 my-3 button-form" type="submit"> CONCLUIR SOLICITAÇÃO </button>
+                        <div style="text-align: center;">
+                            <img src="assets/loading.gif" alt="carregando..." class="load" id="carregando" style="display:none; margin: auto; width:5%"/>
+                        </div>
                         <div class="aviso" style="color: green;">
                         </div>
                     </div>
@@ -394,18 +393,25 @@
 
 <script>
     $(function () {
+        function carregando(){
+            document.getElementById('carregando').style.display = "block";
+            $('.load').fadeIn('slow');
+        };
         $('.form').submit(function(event){
             event.preventDefault();
             $.ajax({
                 url: 'php/enviodemonstracao.php',
                 type: 'POST',
                 data: $('.form').serialize(),
+                beforeSend: carregando,
                 success: function(data){
-                    $('.aviso').html(data);
+                    $('.load').fadeOut('slow', function(){
+                        document.getElementById('carregando').style.display = "none";
+                        $('.aviso').html(data);
+                    });    
                 }
             });
             document.getElementById('title-name').value = '';
-            document.getElementById('title-upname').value = '';
             document.getElementById('title-email').value = '';
             document.getElementById('tel-contato').value = ''; 
             document.getElementById('text-empre').value = ''; 

@@ -137,6 +137,9 @@
                             <textarea class="form-control" name="contentcontato" id="message-text" required></textarea>
                         </div>
                         <button class="w-100 my-3 button-form" type="submit"> CONCLUIR ENVÍO</button>
+                        <div style="text-align: center;">
+                            <img src="assets/loading.gif" alt="carregando..." class="load" id="carregando" style="display:none; margin: auto; width:5%"/>
+                        </div>
                         <div class="aviso" style="color: green;">
                         </div>
                     </div>
@@ -404,14 +407,22 @@
 
 <script> 
     $(function () {
+            function carregando(){
+                document.getElementById('carregando').style.display = "block";
+                $('.load').fadeIn('slow');
+            };
             $('.form').submit(function(event){
                 event.preventDefault();
                 $.ajax({
                     url: 'php/enviocontato.php',
                     type: 'POST',
                     data: $('.form').serialize(),
+                    beforeSend: carregando,
                     success: function(data){
-                        $('.aviso').html(data);
+                        $('.load').fadeOut('slow', function(){
+                            document.getElementById('carregando').style.display = "none";
+                            $('.aviso').html(data);
+                        }); 
                     }
                 });
                 document.getElementById('title-name').value = '';

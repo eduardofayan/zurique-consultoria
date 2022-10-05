@@ -37,4 +37,9 @@ date_default_timezone_set('America/Sao_Paulo');
 } else {
   echo ("Ocorreu um erro no envio, estamos te redirecionando para tentar Novamente");
 };
+if($_POST):
+  if(isset($_POST['url'])&&strlen($_POST['url'])==0 ) {
+      echo " ";
+  }
+endif;
 ?>

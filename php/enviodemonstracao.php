@@ -4,7 +4,6 @@
   
   //Variáveis
   $nomecontato = $_POST['nome'];
-  $sobrenomecontato = $_POST['sobrenome'];
   $emailcontato = $_POST['email'];
   $telcontato = $_POST['tel'];
   $empresacontato = $_POST['empresa'];
@@ -15,7 +14,7 @@
   //Corpo E-mail
   $arquivo = "
     Formulário de Solicitar de Demonstração
-      Nome: $nomecontato $sobrenomecontato
+      Nome: $nomecontato 
       Telefone para contato: $telcontato
       E-mail: $emailcontato
       Nome da Empresa: $empresacontato
@@ -38,4 +37,9 @@
 } else {
   echo ("Ocorreu um erro no envio, estamos te redirecionando para tentar Novamente");
 };
+if($_POST):
+  if(isset($_POST['url'])&&strlen($_POST['url'])==0 ) {
+      echo " ";
+  }
+endif;
 ?>
