@@ -13,7 +13,7 @@
 
   //Corpo E-mail
   $arquivo = "
-    Formulário de Solicitar de Demonstração
+    Formulário de solicitação de demonstração
       Nome: $nomecontato 
       Telefone para contato: $telcontato
       E-mail: $emailcontato
@@ -33,7 +33,23 @@
 
  //Enviar
  if (mail($destino, $assunto, $arquivo, $headers)){
-  echo ("Email Enviado com sucesso! Em breve Entraremos em contato!") ;
+  echo ("Email enviado com sucesso! Em breve entraremos em contato!") ;
+  if(isset($_POST['g-recaptcha-response'])){
+    $captcha=$_POST['g-recaptcha-response'];
+  }
+  if(!$captcha){
+    echo 'Valide corretamente o Recaptcha.';
+    exit;
+  }
+  $secretKey = "6Lcw8OgjAAAAAB2NItOA0cWNPmM9nfYGJ5FMAtrM";
+  $ip = $_SERVER['REMOTE_ADDR'];
+  $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=".$ip);
+  $responseKeys = json_decode($response,true);
+  if(intval($responseKeys["success"]) !== 1) {
+    echo '';
+  } else {
+    echo '';
+  }
 } else {
   echo ("Ocorreu um erro no envio, estamos te redirecionando para tentar Novamente");
 };
